@@ -9,4 +9,8 @@ public class World {
 
     private WorldType type;
 
+    public World(String name) {
+        this.name = name;
+    }
+
 }

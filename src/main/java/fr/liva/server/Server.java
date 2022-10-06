@@ -18,6 +18,7 @@ public class Server {
 
     public Server() {
         this.players = new ArrayList<>();
+        this.worlds = new ArrayList<>();
     }
 
     public Player getPlayer(String name) {

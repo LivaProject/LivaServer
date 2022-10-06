@@ -19,6 +19,6 @@ public abstract class Entity {
     }
 
     public void sendMessage(String message) {
-        LivaServer.livaServerSocket.sendMessage(name, message);
+        LivaServer.livaServerSocket.sendMessage(name, "Message " + message);
     }
 }

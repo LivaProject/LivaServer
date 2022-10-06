@@ -34,6 +34,7 @@ public abstract class OptionUtils {
             ServerOptions.options.put(key, new OptionValue(key.getDefaultValue()));
             System.out.println(LivaAPI.INFO + "Create default option for " + key.getName());
         }
+        saveOptions();
     }
 
     public static void loadOptions() throws OptionException {
@@ -76,6 +77,8 @@ public abstract class OptionUtils {
                 writer.println(key.getName() + "=" + value.getString());
             });
             writer.close();
+
+            System.out.println(LivaAPI.INFO + "Options saved");
         } catch (FileNotFoundException | UnsupportedEncodingException e) {
             throw new OptionException("Cannot find '" + PATH + FILE + "' file, are you sure you didn't delete it ?");
         }

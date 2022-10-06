@@ -14,6 +14,7 @@ public class ServerUtils {
         directories.add("maps/");
         directories.add("data/");
         directories.add("server/");
+        directories.add("accounts/");
 
         System.out.println(LivaAPI.SEPARATOR + "Directories");
         System.out.println(LivaAPI.INFO + "Start creating directories...");

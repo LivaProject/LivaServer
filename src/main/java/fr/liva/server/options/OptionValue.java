@@ -13,6 +13,6 @@ public class OptionValue {
     }
 
     public int getInt() {
-        return (int) object;
+        return Integer.parseInt(String.valueOf(object));
     }
 }
