@@ -1,4 +1,4 @@
-package fr.liva.plugin;
+package fr.liva;
 
 import fr.liva.entity.player.Player;
 import fr.liva.map.world.World;

@@ -1,6 +1,5 @@
 package fr.liva;
 
-import fr.liva.plugin.Liva;
 import fr.thomarz.TClientSocket;
 import fr.thomarz.TServerSocket;
 
@@ -8,8 +7,8 @@ import java.net.InetAddress;
 
 public class LivaServerSocket extends TServerSocket {
 
-    public LivaServerSocket(int port, InetAddress ip) {
-        super(port, ip);
+    public LivaServerSocket(String name, int port, InetAddress ip) {
+        super(name, port, ip);
     }
 
     @Override
