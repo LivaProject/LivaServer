@@ -43,4 +43,21 @@ public class Location {
         this.x /= x;
         this.y /= y;
     }
+
+    public static Location fromString(World world, String s) {
+        try {
+            Location location = new Location(world, Integer.parseInt(s.split(";")[0]), Integer.parseInt(s.split(";")[1]),
+                    Direction.get(Integer.parseInt(s.split(";")[2])));
+
+            return location;
+        } catch (Exception e) {
+
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return x + ";" + y + ";" + direction.getId();
+    }
 }
