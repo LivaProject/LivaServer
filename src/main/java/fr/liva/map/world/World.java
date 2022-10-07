@@ -3,9 +3,6 @@ package fr.liva.map.world;
 import fr.liva.map.bloc.Bloc;
 import lombok.Getter;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 

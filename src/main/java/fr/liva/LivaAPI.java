@@ -1,6 +1,9 @@
 package fr.liva;
 
 import fr.liva.exceptions.OptionException;
+import fr.liva.map.Location;
+import fr.liva.map.bloc.Bloc;
+import fr.liva.map.bloc.BlocType;
 import fr.liva.map.world.World;
 import fr.liva.server.ServerUtils;
 import fr.liva.server.accounts.AccountUtils;
@@ -27,6 +30,10 @@ public class LivaAPI {
             OptionUtils.createOptions();
             MessageUtils.createMessages();
             AccountUtils.createAccounts();
+
+            World world = Liva.getServer().loadWorld("main");
+            world.getBlocs().add(new Bloc(new Location(world, 0, 0), BlocType.GRASS));
+            Liva.getServer().saveWorld(world);
         } catch (OptionException e) {
             e.printStackTrace();
         }
